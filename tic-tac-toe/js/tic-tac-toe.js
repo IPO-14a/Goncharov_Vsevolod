@@ -5,4 +5,8 @@ var N_SIZE = 3,
   score,
   moves;
 
+function init() {
+ 
+}
+
 init();
