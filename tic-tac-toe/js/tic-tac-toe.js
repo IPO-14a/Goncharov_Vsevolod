@@ -9,4 +9,20 @@ function init() {
  
 }
 
+function startNewGame() {
+
+}
+
+function win(clicked) {
+
+}
+
+function contains(selector, text) {
+
+}
+
+function set() {
+
+}
+
 init();
