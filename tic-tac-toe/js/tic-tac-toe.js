@@ -10,7 +10,11 @@ function init() {
   board.setAttribute('border', 1);
   board.setAttribute('cellspacing', 0);
 
- 
+  var identifier = 1;
+  for (var i = 0; i < N_SIZE; i++) {
+    
+    
+  }
 
   document.getElementById('tictactoe').appendChild(board);
   startNewGame();
