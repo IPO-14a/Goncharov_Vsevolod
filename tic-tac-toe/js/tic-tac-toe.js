@@ -1,4 +1,4 @@
-var N_SIZE = 3,
+var N_SIZE = 3, //размер поля
   EMPTY = '&nbsp;',
   boxes = [],
   turn = 'X',
@@ -6,6 +6,7 @@ var N_SIZE = 3,
   moves;
 
 function init() {
+  // Главная функция
   var board = document.createElement('table');
   board.setAttribute('border', 1);
   board.setAttribute('cellspacing', 0);
@@ -40,6 +41,7 @@ function init() {
 }
 
 function startNewGame() {
+  // Функция начала новой игры
   score = {
     'X': 0,
     'O': 0
@@ -52,6 +54,7 @@ function startNewGame() {
 }
 
 function win(clicked) {
+  // Функция определяющая победу
   var memberOf = clicked.className.split(/\s+/);
   for (var i = 0; i < memberOf.length; i++) {
     var testClass = '.' + memberOf[i];
@@ -71,6 +74,7 @@ function contains(selector, text) {
 }
 
 function set() {
+  // Функция определения победителя
   if (this.innerHTML !== EMPTY) {
     return;
   }
