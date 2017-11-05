@@ -6,7 +6,14 @@ var N_SIZE = 3,
   moves;
 
 function init() {
+  var board = document.createElement('table');
+  board.setAttribute('border', 1);
+  board.setAttribute('cellspacing', 0);
+
  
+
+  document.getElementById('tictactoe').appendChild(board);
+  startNewGame();
 }
 
 function startNewGame() {
