@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This document was created with Syntext Serna Free. --><!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "docbookV4.5/docbookx.dtd" []>
+<article>
+  <title>Tic-Tac-Toe(Goncharov_Vsevolod)</title>
+  <articleinfo>
+    <abstract>
+      <title>Разрабатываемое ПО позволяет играть в крестики-нолики. </title>
+      <para>JavaScript, HTML, CSS</para>
+    </abstract>
+  </articleinfo>
+  <abstract>
+    <para>Функционал программы позволяет создавать поле  размером 3*3 ячейки. Поле ходит X затем ходит О, процедура выполняеться до достижения победы одним из игроков или заполнения всех ячеек.</para>
+    <para>Экплуатационное назначение - провести время играя.</para>
+    <para>Потребность в разработке нового решения при существовании готовых продуктов, которые частично реализуют требования, описанные в ТЗ.</para>
+  </abstract>
+  <abstract>
+    <title>Пример №1 - Начало новой игры</title>
+    <para>Служит для начала новой игры</para>
+    <para><programlisting>function startNewGame() {
+  score = {
+    &apos;X&apos;: 0,
+    &apos;O&apos;: 0
+  };
+  moves = 0;
+  turn = &apos;X&apos;;
+  boxes.forEach(function (square) {
+    square.innerHTML = EMPTY;
+  });
+}</programlisting></para>
+  </abstract>
+  <abstract>
+    <title>Пример № 2 - Победа</title>
+    <para>Служит для Определения победы</para>
+    <para><programlisting>function win(clicked) {
+  var memberOf = clicked.className.split(/\s+/);
+  for (var i = 0; i &lt; memberOf.length; i++) {
+    var testClass = &apos;.&apos; + memberOf[i];
+    var items = contains(&apos;#tictactoe &apos; + testClass, turn);
+    if (items.length == N_SIZE) {
+      return true;
+    }
+  }
+  return false;
+}</programlisting></para>
+  </abstract>
+</article>
