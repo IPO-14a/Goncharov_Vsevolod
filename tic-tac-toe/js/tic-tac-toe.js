@@ -12,8 +12,11 @@ function init() {
 
   var identifier = 1;
   for (var i = 0; i < N_SIZE; i++) {
+    var row = document.createElement('tr');
+    board.appendChild(row);
+    for (var j = 0; j < N_SIZE; j++) {
     
-    
+    }
   }
 
   document.getElementById('tictactoe').appendChild(board);
