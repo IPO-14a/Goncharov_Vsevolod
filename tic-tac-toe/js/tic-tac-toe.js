@@ -15,7 +15,23 @@ function init() {
     var row = document.createElement('tr');
     board.appendChild(row);
     for (var j = 0; j < N_SIZE; j++) {
-    
+      var cell = document.createElement('td');
+      cell.setAttribute('height', 120);
+      cell.setAttribute('width', 120);
+      cell.setAttribute('align', 'center');
+      cell.setAttribute('valign', 'center');
+      cell.classList.add('col' + j, 'row' + i);
+      if (i == j) {
+        cell.classList.add('diagonal0');
+      }
+      if (j == N_SIZE - i - 1) {
+        cell.classList.add('diagonal1');
+      }
+      cell.identifier = identifier;
+      cell.addEventListener('click', set);
+      row.appendChild(cell);
+      boxes.push(cell);
+      identifier += identifier;
     }
   }
 
