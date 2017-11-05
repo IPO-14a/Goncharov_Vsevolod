@@ -41,14 +41,29 @@ function win(clicked) {
 }
 
 function contains(selector, text) {
-var elements = document.querySelectorAll(selector);
+  var elements = document.querySelectorAll(selector);
   return [].filter.call(elements, function (element) {
     return RegExp(text).test(element.textContent);
   });
 }
 
 function set() {
-
+  if (this.innerHTML !== EMPTY) {
+    return;
+  }
+  this.innerHTML = turn;
+  moves += 1;
+  score[turn] += this.identifier;
+  if (win(this)) {
+    alert('Winner: Player ' + turn);
+    startNewGame();
+  } else if (moves === N_SIZE * N_SIZE) {
+    alert('Draw');
+    startNewGame();
+  } else {
+    turn = turn === 'X' ? 'O' : 'X';
+    document.getElementById('turn').textContent = 'Player ' + turn;
+  }
 }
 
 init();
