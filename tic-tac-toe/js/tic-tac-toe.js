@@ -114,7 +114,7 @@ function win(clicked) {
     }
     return false;
 }
-*
+
 /*
 *функция проверки символа в ячейке
 *
