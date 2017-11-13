@@ -13,7 +13,7 @@
     <para>Экплуатационное назначение - провести время играя.</para>
     <para>Потребность в разработке нового решения при существовании готовых продуктов, которые частично реализуют требования, описанные в ТЗ.</para>
   </abstract>
-  <abstract>
+  <section>
     <title>Пример №1 - Начало новой игры</title>
     <para>Служит для начала новой игры</para>
     <para><programlisting>function startNewGame() {
@@ -27,8 +27,8 @@
     square.innerHTML = EMPTY;
   });
 }</programlisting></para>
-  </abstract>
-  <abstract>
+  </section>
+  <section>
     <title>Пример № 2 - Победа</title>
     <para>Служит для Определения победы</para>
     <para><programlisting>function win(clicked) {
@@ -42,5 +42,5 @@
   }
   return false;
 }</programlisting></para>
-  </abstract>
+  </section>
 </article>
